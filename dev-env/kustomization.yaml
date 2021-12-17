@@ -11,4 +11,4 @@ resources:
 images:
 - name: mingtong/web-app
   newName: 432127183358.dkr.ecr.us-east-2.amazonaws.com/mingtong/web-app
-  newTag: e1c5d372ee36a68a118c921699c2dc34f9fa0a88
+  newTag: 3dff953fead603647f626169e7017a9aaf8e1e9a
