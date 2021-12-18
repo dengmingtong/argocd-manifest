@@ -8,5 +8,5 @@ spec:
     app: web-backend
   ports:
   - name: http
-    port: 8080
+    port: 7080
     targetPort: 80
