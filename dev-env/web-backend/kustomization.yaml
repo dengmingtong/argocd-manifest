@@ -5,11 +5,8 @@ kind: Kustomization
 
 # list of resource config to be applied
 resources:
-- web-deployment.yaml
-- web-service.yaml
-
-# # namespace to deploy all resources to
-# namespace: rs-beta
+- backend-deployment.yaml
+- backend-service.yaml
 
 
 commonLabels:

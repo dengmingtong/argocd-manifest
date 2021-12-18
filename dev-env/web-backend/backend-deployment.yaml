@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment 
 metadata:
-  name: web-app
+  name: backend-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: web-app
+      app: backend-app
   template:
     metadata:
       labels: 
-        app: web-app
+        app: backend-app
     spec:
       terminationGracePeriodSeconds: 5
       containers:
-      - name: web-app
-        image:  mingtong/web-app:latest
+      - name: backend-app
+        image:  mingtong/backend-app:latest
         ports:
           - name: http
             containerPort: 80

@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment 
 metadata:
-  name: web-app
+  name: web-frontend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: web-app
+      app: web-frontend
   template:
     metadata:
       labels: 
-        app: web-app
+        app: web-frontend
     spec:
       terminationGracePeriodSeconds: 5
       containers:
-      - name: web-app
-        image:  mingtong/web-app:latest
+      - name: web-frontend
+        image:  mingtong/web-frontend:latest
         ports:
           - name: http
             containerPort: 80

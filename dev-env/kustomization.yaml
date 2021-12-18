@@ -5,13 +5,24 @@ kind: Kustomization
 namespace: mingtong-test
 
 resources:
-- web-app
+- web-frontend
+- web-backend
+- config.yaml
 
 # all with following *kustomization*
 images:
-- name: mingtong/web-app
-  newName: 432127183358.dkr.ecr.us-east-2.amazonaws.com/mingtong/web-app
+- name: mingtong/web-frontend
+  newName: 432127183358.dkr.ecr.us-east-2.amazonaws.com/mingtong/web-frontend
   newTag: 9ae4151c884ea677f24ee53561e0b25061d8f7f4
 - name: mingtong/web-backend
   newName: 432127183358.dkr.ecr.us-east-2.amazonaws.com/mingtong/web-backend
   newTag: 9ae4151c884ea677f24ee53561e0b25061d8f7f4
+
+vars:
+- fieldref:
+    fieldPath: data.stage
+  name: STAGE
+  objref:
+    apiVersion: v1
+    kind: ConfigMap
+    name: dev-config
