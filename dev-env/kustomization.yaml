@@ -14,4 +14,4 @@ images:
   newTag: 9ae4151c884ea677f24ee53561e0b25061d8f7f4
 - name: mingtong/web-backend
   newName: 432127183358.dkr.ecr.us-east-2.amazonaws.com/mingtong/web-backend
-  newTag: 89062a01b79e8d74aa358cc85000fd175d9c3c4f
+  newTag: 9ae4151c884ea677f24ee53561e0b25061d8f7f4
