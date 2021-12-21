@@ -11,9 +11,6 @@ resources:
 
 # all with following *kustomization*
 images:
-- name: mingtong/web-app
-  newName: 432127183358.dkr.ecr.us-east-2.amazonaws.com/mingtong/web-app
-  newTag: 9ae4151c884ea677f24ee53561e0b25061d8f7f4
 - name: mingtong/web-backend
   newName: 432127183358.dkr.ecr.us-east-2.amazonaws.com/mingtong/web-backend
   newTag: 723083e85847242f1aa19b9521fad9e81a4cbd5a
