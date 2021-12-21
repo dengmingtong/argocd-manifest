@@ -1,20 +1,22 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-namespace: dev
+# namespace to deploy all resources to
+namespace: prod
 
 resources:
 - web-frontend
 - web-backend
 - config.yaml
 
+# all with following *kustomization*
 images:
 - name: mingtong/web-backend
   newName: 432127183358.dkr.ecr.us-east-2.amazonaws.com/mingtong/web-backend
-  newTag: 723083e85847242f1aa19b9521fad9e81a4cbd5a
+  newTag: bec430fb064c391ef67d667de4bc7bffac992581
 - name: mingtong/web-frontend
   newName: 432127183358.dkr.ecr.us-east-2.amazonaws.com/mingtong/web-frontend
-  newTag: dd32ef8cee7cc528bef9cd54ee924e172507492f
+  newTag: 5fe6c726018c400a0c2c19225d246caf05259147
 
 vars:
 - fieldref:

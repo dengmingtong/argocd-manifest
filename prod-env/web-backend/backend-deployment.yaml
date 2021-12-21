@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment 
 metadata:
-  name: web-frontend
+  name: web-backend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: web-frontend
+      app: web-backend
   template:
     metadata:
       labels: 
-        app: web-frontend
+        app: web-backend
     spec:
       terminationGracePeriodSeconds: 5
       containers:
-      - name: web-frontend
-        image:  mingtong/web-frontend:latest
+      - name: web-backend
+        image:  mingtong/web-backend:latest
         ports:
           - name: http
             containerPort: 80
@@ -25,4 +25,7 @@ spec:
             memory: 512Mi
           limits:
             cpu: 2000m
-            memory: 2048Mi           
+            memory: 2048Mi 
+        env:
+          - name: STAGE
+            value: $(STAGE)                      
