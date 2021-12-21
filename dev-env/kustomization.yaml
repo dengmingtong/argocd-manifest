@@ -3,15 +3,15 @@ kind: Kustomization
 
 namespace: dev
 
-resources:
 # - web-frontend
+resources:
 - web-backend
 - config.yaml
 
 images:
 - name: mingtong/web-backend
   newName: 432127183358.dkr.ecr.us-east-2.amazonaws.com/mingtong/web-backend
-  newTag: 723083e85847242f1aa19b9521fad9e81a4cbd5a
+  newTag: bd76c7437af203d0dff36c666495df0d848aebd3
 - name: mingtong/web-frontend
   newName: 432127183358.dkr.ecr.us-east-2.amazonaws.com/mingtong/web-frontend
   newTag: dd32ef8cee7cc528bef9cd54ee924e172507492f
