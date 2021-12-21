@@ -5,7 +5,7 @@ kind: Kustomization
 namespace: argo-demo-dev
 
 resources:
-- web-frontend
+# - web-frontend
 - web-backend
 - config.yaml
 
