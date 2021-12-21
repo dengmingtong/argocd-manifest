@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: dev-config
 data:
-  stage: "DEV-ENV!!@@!!"
+  stage: "DEV"
